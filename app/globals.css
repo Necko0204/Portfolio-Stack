@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   --ink: #101114;
   --muted: #62666d;
@@ -13,8 +11,8 @@
   --line: #d9d8d2;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; border: 0 solid; }
+html { line-height: 1.5; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   width: 100%;
@@ -24,10 +22,13 @@ body {
   color: var(--ink);
   font-family: var(--font-geist-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
 }
+h1, h2, h3, p { margin: 0; }
+ol, ul, menu { margin: 0; padding: 0; list-style: none; }
 a { color: inherit; text-decoration: none; }
 button, input, textarea, select { font: inherit; }
 button { color: inherit; }
-img { display: block; max-width: 100%; }
+img, svg, video, canvas { display: block; vertical-align: middle; }
+img, video { max-width: 100%; height: auto; }
 ::selection { background: var(--lime); color: var(--ink); }
 
 .site-nav {
